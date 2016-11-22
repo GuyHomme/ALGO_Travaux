@@ -11,7 +11,7 @@ VAR
 	espace,espace2,espace3:STRING;
 
 BEGIN
-	clrscr;
+	clrscr;//Modif chibre
 	espace:=' ';
 	writeln('Veuillez entrer le caractere qui constituera votre croix');
 	readln(lettre);
