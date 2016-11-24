@@ -100,7 +100,7 @@ BEGIN
 									jet:=(Random(6)+1);
 									write((UTF8TOANSI('Le dé affiche ')),jet);
 									essais:=(essais+1);
-									perdu:=(essais>15);
+									perdu:=(essais>20);
 										CASE perdu OF
 											TRUE:
 												BEGIN
@@ -113,9 +113,12 @@ BEGIN
 												BEGIN
 													IF(player+jet>max) THEN
 														BEGIN
-															writeln('Vous dépassez le max');
+															write(UTF8TOANSI(' ,vous dépassez la dernière case de '));
 															jet:=(player+jet);
+															jet:=(jet-max);
+															write(jet, (UTF8TOANSI(' donc vous reculez à la case ')));
 															player:=(max-jet);
+															writeln(player);
 														END
 													ELSE
 														BEGIN
@@ -148,10 +151,11 @@ BEGIN
 																	
 														END;
 													CASE essais OF
-														5:writeln('Il vous reste 10 essais');
-														10:writeln('Il vous reste 5 essais');
-														14:writeln('Il vous reste 2 essais !');
-														15:writeln('C''est votre dernier essai');
+														5:writeln('Il vous reste 15 essais');
+														10:writeln('Il vous reste 10 essais');
+														15:writeln('Il vous reste 5 essais !');
+														19:writeln('Il vous reste 2 essais !!');
+														20:writeln('C''est votre dernier essai');
 													END;
 												END;
 										END;
