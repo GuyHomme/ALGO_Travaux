@@ -1,6 +1,6 @@
 ﻿{
 //ALGO: BatailleNavale
-//BUT: Enoncé
+//BUT: Programme de bataille navale sans utilisation de tableau pour la grille et le placement des bateaux.
 //ENTREES: Coordonnées, direction, confirmation
 //SORTIES:	Affichage grille+bateaux, consignes
 
